@@ -1,0 +1,133 @@
+.brief-section {
+   &__wrapper {
+      padding-bottom: 80px;
+   }
+
+   &__title {
+      &::before {
+         display: none;
+      }
+   }
+
+   &__subtitle {
+      text-indent: 200px;
+      position: relative;
+      z-index: 1;
+   }
+
+   &__form {
+   }
+}
+
+.brief-form {
+   width: calc(100% + 256px);
+   margin-top: 56px;
+   border: 2px solid $purple;
+   position: relative;
+   padding-top: 15px;
+   padding-bottom: 45px;
+   translate: -128px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 64px;
+   &__rect {
+      width: 14px;
+      height: 10px;
+      position: absolute;
+      border: 2px solid $purple;
+      background-color: #050505;
+      z-index: 1;
+      &:nth-child(1) {
+         right: 100%;
+         top: 0;
+         translate: 2px -4px;
+      }
+      &:nth-child(2) {
+         top: 0;
+         left: 100%;
+         translate: -2px -4px;
+      }
+      &:nth-child(3) {
+         top: 100%;
+         right: 100%;
+         translate: 2px -2px;
+      }
+      &:nth-child(4) {
+         top: 100%;
+         left: 100%;
+         translate: -2px -2px;
+      }
+   }
+   &__tabs {
+      display: flex;
+      gap: 37px;
+      justify-content: center;
+      input {
+         display: none;
+      }
+      label {
+         transition: 0.3s;
+         cursor: pointer;
+      }
+      input:checked + label {
+         color: $purple;
+      }
+   }
+
+   &__content {
+   }
+   &__main {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 70px;
+      &.active {
+         display: flex;
+      }
+   }
+   &__list {
+      width: 561px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 22px;
+      li {
+         width: 100%;
+      }
+   }
+   &__send {
+      height: 57px;
+      background-color: $pink;
+      padding-left: 21px;
+      padding-right: 21px;
+   }
+}
+
+@media (max-width: 1400px) {
+   .brief-form {
+      width: 100%;
+      translate: 0;
+   }
+}
+@media (max-width: 992px) {
+   .brief-section {
+      &__subtitle {
+         text-indent: 0;
+         br {
+            display: none;
+         }
+      }
+   }
+   .brief-form {
+      padding-left: 12px;
+      padding-right: 12px;
+      &__tabs {
+         white-space: nowrap;
+         flex-wrap: wrap;
+         row-gap: 10px;
+      }
+      &__list {
+         width: 100%;
+      }
+   }
+}

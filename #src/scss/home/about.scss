@@ -1,0 +1,75 @@
+.home-about {
+   overflow: hidden;
+   &__wrapper {
+      padding-bottom: 140px;
+      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+   }
+
+   &__title {
+   }
+
+   &__description {
+      max-width: 590px;
+      position: relative;
+      &::before {
+         content: "";
+         display: block;
+         width: 192px;
+         height: 117px;
+         background: url(../img/icons/3-row-circles.svg) center / cover
+            no-repeat;
+         position: absolute;
+         right: 100%;
+         top: 20px;
+         translate: -14px 0;
+      }
+   }
+
+   &__footer {
+      display: flex;
+      flex-direction: column;
+      .subtitle {
+         color: #424242;
+         line-height: 1;
+         &::before {
+            display: none;
+         }
+      }
+   }
+   &__geometry {
+      position: absolute;
+      bottom: 240px;
+      left: 100%;
+      translate: -25% 0;
+      height: 383px;
+      width: 455px;
+      background: url(../img/icons/about-geometry.png) center / cover no-repeat;
+      .member {
+         top: 25%;
+         left: 100px;
+      }
+   }
+   .member {
+      &.first {
+         top: 50%;
+         translate: 0 -50%;
+         left: 640px;
+      }
+      &.second {
+         bottom: 140px;
+         left: 100%;
+         translate: -30% 0;
+      }
+   }
+   @media (max-width: 992px) {
+      .member {
+         display: none;
+      }
+      &__geometry {
+         display: none;
+      }
+   }
+}

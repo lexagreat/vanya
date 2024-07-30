@@ -1,0 +1,157 @@
+.wrapper {
+   font-family: "Consolas", sans-serif;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background-color: #050505;
+   color: white;
+}
+.main {
+   flex: 1;
+}
+.container {
+   max-width: 965px;
+   width: 100%;
+   margin: 0 auto;
+   border-left: 1px solid #1b1b1b;
+   border-right: 1px solid #1b1b1b;
+   position: relative;
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #1b1b1b;
+   }
+   &::before {
+      left: 180px;
+   }
+   &::after {
+      right: 160px;
+   }
+   @media (max-width: 992px) {
+      padding-left: 12px;
+      padding-right: 12px;
+      &::before,
+      &::after {
+         display: none;
+      }
+   }
+}
+.btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-transform: uppercase;
+}
+
+.section {
+   &__wrapper {
+      position: relative;
+   }
+}
+
+.member {
+   position: absolute;
+   z-index: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+   &.purple {
+      svg path {
+         fill: $purple;
+      }
+      .member__name {
+         background-color: $purple;
+      }
+   }
+   &.blue {
+      svg path {
+         fill: $blue;
+      }
+      .member__name {
+         background-color: $blue;
+      }
+   }
+   &__name {
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      height: 42px;
+      padding-left: 13px;
+      padding-right: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+      text-transform: uppercase;
+   }
+   svg {
+      position: absolute;
+      top: 50px;
+      left: 63px;
+   }
+   &__image {
+      width: 63px;
+      height: 63px;
+      flex: 0 0 63px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+.subtitle {
+   color: $pink;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 55px;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   position: relative;
+   &::before {
+      content: "";
+      display: block;
+      background: url(../img/icons/dots-line.svg) left / auto repeat;
+      width: 90px;
+      height: 5px;
+      position: absolute;
+      top: 40%;
+      right: 100%;
+      translate: -14px 0;
+   }
+}
+.main-text {
+   text-transform: uppercase;
+   color: white;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 55px;
+   letter-spacing: 0.18em;
+}
+
+.project-input {
+   input {
+      width: 100%;
+      height: 57px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 18px;
+      line-height: 55px;
+      letter-spacing: 0.18em;
+      background-color: #050505;
+      border: 1px solid $pink;
+      text-transform: uppercase;
+      color: white;
+      &::placeholder {
+         color: #ffffff1f;
+         text-transform: uppercase;
+      }
+   }
+}
