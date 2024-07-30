@@ -32,6 +32,7 @@ aside {
 
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -899,7 +900,7 @@ img {
   translate: 0 -50px;
 }
 
-.our-works__subtitle button {
+.our-works__subtitle a {
   height: 57px;
   background-color: #e52565;
   padding-left: 12px;
