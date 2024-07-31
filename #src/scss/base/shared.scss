@@ -75,6 +75,14 @@
          background-color: $blue;
       }
    }
+   &.pink {
+      svg path {
+         fill: $pink;
+      }
+      .member__name {
+         background-color: $pink;
+      }
+   }
    &__name {
       white-space: nowrap;
       font-size: 14px;

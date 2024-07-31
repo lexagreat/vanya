@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
    // textWriting();
    tabs(".brief-form__tabs input", ".brief-form__main");
    initServicesSlider();
+   initTeamSlider();
 });
 
 function textWriting() {
@@ -93,6 +94,23 @@ function initServicesSlider() {
          },
          568: {
             slidesPerView: 2,
+         },
+      },
+   });
+}
+
+function initTeamSlider() {
+   if (!document.querySelector(".team-section .swiper")) {
+      return;
+   }
+   let slider = new Swiper(".team-section .swiper", {
+      spaceBetween: 44,
+      speed: 500,
+      slidesPerView: "auto",
+      loop: true,
+      breakpoints: {
+         992: {
+            loop: false,
          },
       },
    });
