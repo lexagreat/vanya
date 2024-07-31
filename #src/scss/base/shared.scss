@@ -134,6 +134,10 @@
    font-weight: 700;
    line-height: 55px;
    letter-spacing: 0.18em;
+   @media (max-width: 992px) {
+      font-size: 20px;
+      line-height: 2;
+   }
 }
 
 .project-input {
@@ -149,9 +153,13 @@
       border: 1px solid $pink;
       text-transform: uppercase;
       color: white;
+      transition: 0.3s;
       &::placeholder {
          color: #ffffff1f;
          text-transform: uppercase;
+      }
+      &:focus {
+         background-color: $pink;
       }
    }
 }

@@ -50,6 +50,8 @@
    }
 
    &__subtitle {
+      position: relative;
+      z-index: 1;
       font-size: 24px;
       font-weight: 700;
       line-height: 55px;
@@ -60,6 +62,8 @@
       display: flex;
       gap: 22px;
       padding-left: 120px;
+      position: relative;
+      z-index: 1;
       button {
          height: 57px;
          font-size: 24px;
@@ -90,7 +94,8 @@
       &__wrapper {
          .member {
             left: unset;
-            right: -30px;
+            right: 0px;
+            bottom: 50px;
          }
       }
    }
@@ -102,11 +107,19 @@
             bottom: 32px;
          }
       }
+      &__title {
+         font-size: 36px;
+         &::before {
+            display: none;
+         }
+      }
       &__footer {
          padding-left: 0;
          flex-wrap: wrap;
          button {
             flex: 1;
+            padding-left: 12px;
+            padding-right: 12px;
          }
       }
    }

@@ -19,6 +19,7 @@
 document.addEventListener("DOMContentLoaded", () => {
    // textWriting();
    tabs(".brief-form__tabs input", ".brief-form__main");
+   initServicesSlider();
 });
 
 function textWriting() {
@@ -75,4 +76,24 @@ if (document.getElementById("phone")) {
 }
 if (document.getElementById("callbackPhone")) {
    const mask = IMask(document.getElementById("callbackPhone"), maskOptions);
+}
+
+function initServicesSlider() {
+   if (!document.querySelector(".services-modeling .swiper")) {
+      return;
+   }
+   let slider = new Swiper(".services-modeling .swiper", {
+      spaceBetween: 44,
+      speed: 500,
+      slidesPerView: 1,
+
+      breakpoints: {
+         993: {
+            slidesPerView: "auto",
+         },
+         568: {
+            slidesPerView: 2,
+         },
+      },
+   });
 }

@@ -1,0 +1,187 @@
+.steps-section {
+   position: relative;
+   &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 120px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #1b1b1b;
+   }
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      padding-top: 60px;
+      padding-bottom: 70px;
+   }
+
+   &__title {
+   }
+
+   &__list {
+   }
+
+   &__item {
+      translate: 120px 0;
+      width: calc(100% - 120px);
+      &:nth-child(1) {
+         position: relative;
+         &::before {
+            content: "";
+            display: block;
+            background: url(../img/icons/dots-line.svg) left / auto repeat;
+            width: 90px;
+            height: 5px;
+            position: absolute;
+            top: 75px;
+            right: 100%;
+            translate: 5px 0;
+         }
+         &::after {
+            content: "";
+            display: block;
+            background: url(../img/icons/dots-line.svg) left / auto repeat;
+            width: 90px;
+            height: 5px;
+            position: absolute;
+            top: 22px;
+            right: 100%;
+            translate: 5px 0;
+         }
+      }
+   }
+
+   &__subtitle {
+      color: $purple;
+      position: relative;
+      translate: 120px 0;
+      width: calc(100% - 120px);
+      .subtitle {
+         &::before {
+            display: none;
+         }
+      }
+      &::before {
+         content: "";
+         display: block;
+         background: url(../img/icons/dots-line.svg) left / auto repeat;
+         width: 90px;
+         height: 5px;
+         position: absolute;
+         top: 22px;
+         right: 100%;
+         translate: -14px 0;
+      }
+   }
+
+   &__text {
+      text-transform: uppercase;
+      position: relative;
+      width: calc(100% - 240px);
+      translate: 240px 0;
+      display: block;
+      white-space: nowrap;
+      &::before {
+         content: "";
+         display: block;
+         background: url(../img/icons/dots-line.svg) left / auto repeat;
+         width: 90px;
+         height: 5px;
+         position: absolute;
+         top: 22px;
+         right: 100%;
+         translate: -14px 0;
+      }
+   }
+
+   &__optional {
+      translate: 240px 0;
+      width: calc(100% - 240px);
+
+      text-transform: uppercase;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      color: #ffffff30;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0.18em;
+   }
+   @media (max-width: 992px) {
+      &__wrapper {
+         gap: 24px;
+      }
+      &__item {
+         translate: 0;
+         width: 100%;
+         &:nth-child(1) {
+            position: relative;
+            &::before {
+               display: none;
+            }
+            &::after {
+               display: none;
+            }
+         }
+      }
+
+      &__subtitle {
+         translate: 0;
+         width: 100%;
+         &::before {
+            display: none;
+         }
+      }
+
+      &__text {
+         white-space: unset;
+         translate: 0;
+         width: 100%;
+         &::before {
+            display: none;
+         }
+      }
+
+      &__optional {
+         translate: 0;
+         width: 100%;
+      }
+   }
+}
+
+.development {
+   &__subtitle {
+      color: $purple !important;
+      &::before {
+         display: none;
+      }
+   }
+   .steps-section {
+      &__wrapper {
+         gap: 12px;
+      }
+      &__title {
+         &::before {
+            display: none;
+         }
+      }
+      &__subtitle {
+         color: white;
+      }
+      &__item {
+         display: flex;
+         flex-direction: column;
+         gap: 32px;
+         &:nth-child(1) {
+            &::before,
+            &::after {
+               display: none;
+            }
+         }
+      }
+   }
+}
