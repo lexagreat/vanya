@@ -1,0 +1,36 @@
+.contacts-page {
+   position: relative;
+   overflow: unset;
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: url(../img/about-page.png) center / cover no-repeat;
+      inset: 0;
+      z-index: 1;
+      top: -136px;
+      pointer-events: none;
+   }
+   a {
+      white-space: nowrap;
+   }
+   &__footer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      ul {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         li {
+            a {
+               color: $pink;
+               font-size: 14px;
+               font-weight: 700;
+               white-space: nowrap;
+               text-transform: uppercase;
+            }
+         }
+      }
+   }
+}

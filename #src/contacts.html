@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Контакты",
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html', {})
+      <main>
+         <section class="home-about section contacts-page">
+            <div class="container">
+               <div class="home-about__wrapper section__wrapper">
+                  <h2 class="home-about__title subtitle">&lt;Где нас найти&gt;</h2>
+                  <p class="home-about__description main-text">
+                     <span>Поддержка <a href="tel:+7 (993)913-23-23" class="main-text">+7 (993)913-23-23</a></span>
+                     <span>консультация <a href="tel:+7 (993)913-23-23" class="main-text">+7 (993)913-23-23</a></span>
+                     <span>вакансии <a href="tel:+7 (993)913-23-23" class="main-text">+7 (993)913-23-23</a></span>
+
+                  </p>
+                  <div class="home-about__footer">
+                     <span class="subtitle">
+                        Moscow/russia
+                     </span>
+                     <span class="subtitle">
+                        UTC+4
+                     </span>
+                  </div>
+                  <div class="contacts-page__footer">
+
+                     <span class="main-text">мы в социальных сетях</span>
+                     <ul class="contacts-page__list">
+                        <li>
+                           <a href="#" class="header__link" target="_blank">facebook&gt;</a>
+                        </li>
+                        <li>
+                           <a href="#" class="header__link" target="_blank">instagram&gt;</a>
+                        </li>
+                        <li>
+                           <a href="#" class="header__link" target="_blank">behance&gt;</a>
+                        </li>
+                        <li>
+                           <a href="#" class="header__link" target="_blank">gitlab&gt;</a>
+                        </li>
+                        <li>
+                           <a href="#" class="header__link" target="_blank">github&gt;</a>
+                        </li>
+
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="brief-section" id="brief">
+            <div class="container">
+               <div class="section__wrapper brief-section__wrapper">
+                  <h2 class="brief-section__title subtitle">&lt;заявка&gt;</h2>
+                  <p class="brief-section__subtitle main-text">
+                     оставьте заявку или закажите звонок - <br> &lt;консультация бесплатно&gt;
+                  </p>
+                  <div class="brief-section__form brief-form">
+                     <div class="brief-form__rect"></div>
+                     <div class="brief-form__rect"></div>
+                     <div class="brief-form__rect"></div>
+                     <div class="brief-form__rect"></div>
+                     <ul class="brief-form__tabs">
+                        <li>
+                           <input checked type="radio" name="brief" value="brief1" id="brief1">
+                           <label for="brief1" class="main-text">
+                              &lt;заказать&gt;
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="brief" value="brief2" id="brief2">
+                           <label for="brief2" class="main-text">
+                              &lt;обратный звонок&gt;
+                           </label>
+                        </li>
+                     </ul>
+                     <div class="brief-form__content">
+                        <div class="brief-form__main active" data-tab="brief1">
+                           <ul class="brief-form__list">
+                              <li class="project-input">
+                                 <input type="text" placeholder="ФИО">
+                              </li>
+                              <li class="project-input">
+                                 <input type="text" placeholder="Почта">
+                              </li>
+                              <li class="project-input">
+                                 <input type="text" placeholder="+7___ ___ __ __" id="phone">
+                              </li>
+                              <li class="project-input">
+                                 <input type="text" placeholder="кратко о задаче(500 символов)">
+                              </li>
+                           </ul>
+                           <button class="btn brief-form__send main-text">ОТправить</button>
+
+                        </div>
+                        <div class="brief-form__main" data-tab="brief2">
+                           <ul class="brief-form__list">
+                              <li class="project-input">
+                                 <input type="text" placeholder="+7___ ___ __ __" id="callbackPhone">
+                              </li>
+                           </ul>
+                           <button class="btn brief-form__send main-text">ОТправить</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/footer.html', {})
+   </div>
+   <script src="https://unpkg.com/imask"></script>
+   <script src="js/app.js"></script>
+</body>
+
+</html>

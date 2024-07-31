@@ -1418,6 +1418,56 @@ img {
   color: #9d81ef;
 }
 
+.contacts-page {
+  position: relative;
+  overflow: unset;
+}
+
+.no-webp .contacts-page::after{
+  background: url(../img/about-page.png) center/cover no-repeat; }
+
+.contacts-page::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  top: -136px;
+  pointer-events: none;
+}
+
+.contacts-page a {
+  white-space: nowrap;
+}
+
+.contacts-page__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.contacts-page__footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3px;
+}
+
+.contacts-page__footer ul li a {
+  color: #e52565;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1440px) {
   .home-hero__wrapper .member {
     left: unset;
@@ -1648,3 +1698,5 @@ img {
 }
 
 .webp .home-about__geometry{ background: url(../img/icons/about-geometry.webp) center/cover no-repeat; }
+
+.webp .contacts-page::after{ background: url(../img/about-page.webp) center/cover no-repeat; }
