@@ -17,32 +17,39 @@
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-   // textWriting();
+   textWriting();
    tabs(".brief-form__tabs input", ".brief-form__main");
    initServicesSlider();
    initTeamSlider();
 });
 
 function textWriting() {
-   var wrapper = document.querySelector(".home-hero__title");
-   var text = document.querySelector(".home-hero__title h1");
-
-   var textCont = text.textContent;
-   text.style.display = "none";
-
-   for (var i = 0; i < textCont.length; i++) {
-      (function (i) {
-         setTimeout(function () {
-            // Created textNode to append
-            var texts = document.createTextNode(textCont[i]);
-            var span = document.createElement("span");
-            span.appendChild(texts);
-
-            span.classList.add("wave");
-            wrapper.appendChild(span);
-         }, 75 * i);
-      })(i);
+   const textLine = document.querySelector(".home-hero__title");
+   let index = 0;
+   let obj = [">hello world  <<креативная веб- студия>"];
+   if (index == obj.length) {
+      return;
    }
+   let newArr = obj[index].split("");
+   let j = 0;
+
+   const interval = setInterval(() => {
+      if (j == 12) {
+         let span = document.createElement("span");
+         textLine.append(span);
+      }
+      if (j > 12) {
+         const textLineSpan = document.querySelector(".home-hero__title span");
+         textLineSpan.innerHTML += newArr[j];
+      }
+      if (j < 12) {
+         textLine.innerHTML += newArr[j];
+      }
+      j += 1;
+      if (j == newArr.length) {
+         clearInterval(interval);
+      }
+   }, 200);
 }
 
 function tabs(linkSelector, contentSelector) {
