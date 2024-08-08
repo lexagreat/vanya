@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function textWriting() {
    const textLine = document.querySelector(".home-hero__title");
+   if (!textLine) return;
    let index = 0;
    let obj = [">hello world  <<креативная веб- студия>"];
    if (index == obj.length) {
@@ -120,5 +121,13 @@ function initTeamSlider() {
             loop: false,
          },
       },
+   });
+   const slides = document.querySelectorAll(
+      ".team-section .swiper .swiper-slide"
+   );
+   slides.forEach((item, index) => {
+      item.addEventListener("click", () => {
+         slider.slideTo(index);
+      });
    });
 }

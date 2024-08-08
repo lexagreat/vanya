@@ -1345,6 +1345,7 @@ img {
 }
 
 .team-member {
+  cursor: pointer;
   max-width: 278px;
   display: -webkit-box;
   display: -ms-flexbox;
