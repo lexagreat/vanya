@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
    tabs(".brief-form__tabs input", ".brief-form__main");
    initServicesSlider();
    initTeamSlider();
+   tabs(".blog-hero__list input", ".blog-content__list");
 });
 
 function textWriting() {
